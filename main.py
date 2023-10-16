@@ -16,8 +16,10 @@ def calculate(numbers: Calculator):
         return {"Result": numbers.num_1 - numbers.num_2}
     elif numbers.operation == "*":
         return {"Result": numbers.num_1 * numbers.num_2}
-    elif numbers.operation == "/":
+    elif numbers.operation == "/" and num_2 != 0:
         return {"Result": numbers.num_1 / numbers.num_2}
     elif numbers.operation == "**":
         return {"Result": numbers.num_1 ** numbers.num_2}
+    else:
+        return "Error"
 
